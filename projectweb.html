@@ -1,0 +1,1819 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="IRONFUEL Performance Nutrition & Strength Equipment - Premium Whey Protein, Creatine Monohydrate, and Heavy-Duty Gym Gear."
+    />
+    <title>IRONFUEL | Gym Equipment &amp; Performance Supplements</title>
+
+    <!-- Google Fonts: Oswald for strong athletic headings & Inter for crisp, legible body text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS CDN for clean utility styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "system-ui", "-apple-system", "sans-serif"],
+              display: ["Oswald", "Impact", "sans-serif"],
+            },
+            colors: {
+              brand: {
+                dark: "#111827" /* Gray 900 - Contrast > 17:1 on white */,
+                crimson:
+                  "#991B1B" /* Red 800 - Contrast > 7.5:1 with white text (WCAG AAA) */,
+                crimsonHover: "#7F1D1D" /* Red 900 */,
+                surface: "#F8FAFC" /* Slate 50 */,
+                border: "#CBD5E1" /* Slate 300 */,
+                muted: "#334155" /* Slate 700 - Contrast > 10:1 on white */,
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      /* Base typography & smooth transitions */
+      body {
+        font-family:
+          "Inter",
+          system-ui,
+          -apple-system,
+          sans-serif;
+        color: #111827;
+        background-color: #f1f5f9;
+        margin: 0;
+        padding: 0;
+        line-height: 1.65;
+      }
+
+      h1,
+      h2,
+      h3,
+      .font-heading {
+        font-family: "Oswald", sans-serif;
+        letter-spacing: 0.02em;
+      }
+
+      /* Active navigation indicator */
+      .nav-link.active {
+        background-color: #991b1b;
+        color: #ffffff;
+      }
+
+      /* Focus rings for keyboard accessibility & WAVE compliance */
+      a:focus-visible,
+      button:focus-visible,
+      input:focus-visible,
+      textarea:focus-visible {
+        outline: 3px solid #991b1b;
+        outline-offset: 2px;
+      }
+
+      /* Page section fade transition */
+      .page-view {
+        display: none;
+        animation: fadeIn 0.25s ease-in-out;
+      }
+
+      .page-view.active {
+        display: block;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(4px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body
+    class="min-h-screen flex flex-col antialiased selection:bg-brand-crimson selection:text-white"
+  >
+    <!-- Skip to Main Content Link for Screen Readers / Accessibility -->
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-brand-crimson focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:font-semibold"
+    >
+      Skip to main content
+    </a>
+
+    <!-- TOP NAVIGATION BAR (Matches Classic Layout: Logo Left, 3-Item Nav Right) -->
+    <header
+      class="bg-brand-dark text-white shadow-md sticky top-0 z-40 border-b-4 border-brand-crimson"
+    >
+      <div
+        class="max-w-5xl mx-auto px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-4"
+      >
+        <!-- Brand Logo on the Left -->
+        <a
+          href="#home"
+          onclick="navigateTo('home', event)"
+          class="flex items-center gap-3 group rounded-lg px-2 py-1"
+          aria-label="IRONFUEL Home"
+        >
+          <div
+            class="bg-brand-crimson p-2 rounded-lg flex items-center justify-center shadow-inner group-hover:bg-brand-crimsonHover transition-colors"
+          >
+            <!-- Custom Inline SVG Dumbbell Icon -->
+            <svg
+              class="w-7 h-7 text-white"
+              viewBox="0 0 32 32"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <rect
+                x="3"
+                y="9"
+                width="4"
+                height="14"
+                rx="1.5"
+                fill="currentColor"
+              />
+              <rect
+                x="8"
+                y="6"
+                width="4"
+                height="20"
+                rx="1.5"
+                fill="currentColor"
+              />
+              <line x1="12" y1="16" x2="20" y2="16" stroke-width="3.5" />
+              <rect
+                x="20"
+                y="6"
+                width="4"
+                height="20"
+                rx="1.5"
+                fill="currentColor"
+              />
+              <rect
+                x="25"
+                y="9"
+                width="4"
+                height="14"
+                rx="1.5"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+          <div>
+            <span
+              class="font-heading text-2xl font-bold tracking-wider uppercase block leading-none text-white"
+              >IRONFUEL</span
+            >
+            <span
+              class="text-xs text-slate-300 tracking-widest uppercase font-medium"
+              >Strength &amp; Nutrition</span
+            >
+          </div>
+        </a>
+
+        <!-- 3-Item Navigation Menu on the Right -->
+        <nav aria-label="Primary Navigation">
+          <ul class="flex items-center gap-2 sm:gap-3 m-0 p-0 list-none">
+            <li>
+              <a
+                href="#home"
+                id="nav-home"
+                onclick="navigateTo('home', event)"
+                class="nav-link active inline-block px-5 py-2.5 rounded-lg text-sm font-semibold uppercase tracking-wider text-white hover:bg-slate-800 transition-colors"
+              >
+                Home
+              </a>
+            </li>
+            <li>
+              <a
+                href="#products"
+                id="nav-products"
+                onclick="navigateTo('products', event)"
+                class="nav-link inline-block px-5 py-2.5 rounded-lg text-sm font-semibold uppercase tracking-wider text-white hover:bg-slate-800 transition-colors"
+              >
+                Products
+              </a>
+            </li>
+            <li>
+              <a
+                href="#contact"
+                id="nav-contact"
+                onclick="navigateTo('contact', event)"
+                class="nav-link inline-block px-5 py-2.5 rounded-lg text-sm font-semibold uppercase tracking-wider text-white hover:bg-slate-800 transition-colors"
+              >
+                Contact
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- CENTERED MAIN CONTAINER -->
+    <main
+      id="main-content"
+      class="flex-grow max-w-5xl w-full mx-auto px-4 sm:px-6 py-8 sm:py-12"
+    >
+      <div
+        class="bg-white rounded-2xl shadow-sm border border-brand-border p-6 sm:p-10 md:p-12"
+      >
+        <!-- =================================================================== -->
+        <!-- PAGE 1: HOME VIEW                                                   -->
+        <!-- =================================================================== -->
+        <section
+          id="page-home"
+          class="page-view active"
+          aria-labelledby="home-heading"
+        >
+          <!-- Main Heading -->
+          <div class="text-center max-w-3xl mx-auto mb-8">
+            <span
+              class="inline-block bg-red-50 text-brand-crimson border border-red-200 text-xs font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-full mb-3"
+            >
+              Est. 2018 &bull; Helsinki Performance Lab
+            </span>
+            <h1
+              id="home-heading"
+              class="text-4xl sm:text-5xl font-bold text-brand-dark uppercase tracking-tight mb-3"
+            >
+              Fuel Your Strength. Forge Your Legacy.
+            </h1>
+            <p class="text-lg text-brand-muted font-medium">
+              Laboratory-tested sports supplements and competition-grade iron
+              for dedicated lifters.
+            </p>
+          </div>
+
+          <!-- Centered Hero Banner Image (Custom Inline SVG Illustration - Zero External Dependencies) -->
+          <figure
+            class="my-8 rounded-xl overflow-hidden border border-brand-border shadow-md bg-slate-900"
+          >
+            <svg
+              class="w-full h-auto block"
+              viewBox="0 0 960 400"
+              role="img"
+              aria-labelledby="hero-svg-title hero-svg-desc"
+            >
+              <title id="hero-svg-title">
+                IRONFUEL Gym Training Floor and Supplement Lineup
+              </title>
+              <desc id="hero-svg-desc">
+                Illustration of heavy Olympic barbell plates, kettlebell, and
+                IRONFUEL Whey Protein and Creatine tubs on a dark gym floor with
+                crimson accent lighting.
+              </desc>
+              <defs>
+                <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#0F172A" />
+                  <stop offset="50%" stop-color="#1E293B" />
+                  <stop offset="100%" stop-color="#111827" />
+                </linearGradient>
+                <linearGradient
+                  id="crimsonGlow"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="0%"
+                >
+                  <stop offset="0%" stop-color="#991B1B" stop-opacity="0.9" />
+                  <stop offset="100%" stop-color="#DC2626" stop-opacity="0.4" />
+                </linearGradient>
+                <linearGradient
+                  id="metalGrad"
+                  x1="0%"
+                  y1="0%"
+                  x2="0%"
+                  y2="100%"
+                >
+                  <stop offset="0%" stop-color="#94A3B8" />
+                  <stop offset="50%" stop-color="#475569" />
+                  <stop offset="100%" stop-color="#1E293B" />
+                </linearGradient>
+              </defs>
+
+              <!-- Background -->
+              <rect width="960" height="400" fill="url(#bgGrad)" />
+
+              <!-- Subtle Architectural Gym Grid Lines -->
+              <g stroke="#334155" stroke-width="1" opacity="0.35">
+                <line x1="0" y1="320" x2="960" y2="320" />
+                <line x1="120" y1="0" x2="120" y2="320" />
+                <line x1="320" y1="0" x2="320" y2="320" />
+                <line x1="520" y1="0" x2="520" y2="320" />
+                <line x1="720" y1="0" x2="720" y2="320" />
+              </g>
+
+              <!-- Crimson Accent Banner Stripe -->
+              <polygon points="0,320 960,320 960,400 0,400" fill="#090D16" />
+              <rect
+                x="0"
+                y="316"
+                width="960"
+                height="6"
+                fill="url(#crimsonGlow)"
+              />
+
+              <!-- Left Element: Heavy Olympic Barbell & 20kg Bumper Plates -->
+              <g transform="translate(110, 125)">
+                <!-- Barbell Shaft -->
+                <rect
+                  x="-40"
+                  y="92"
+                  width="340"
+                  height="12"
+                  rx="4"
+                  fill="url(#metalGrad)"
+                />
+                <!-- Left Plates -->
+                <rect
+                  x="25"
+                  y="18"
+                  width="24"
+                  height="160"
+                  rx="6"
+                  fill="#1E293B"
+                  stroke="#64748B"
+                  stroke-width="2"
+                />
+                <rect
+                  x="33"
+                  y="28"
+                  width="8"
+                  height="140"
+                  rx="2"
+                  fill="#991B1B"
+                />
+                <rect
+                  x="54"
+                  y="34"
+                  width="20"
+                  height="128"
+                  rx="5"
+                  fill="#334155"
+                  stroke="#94A3B8"
+                  stroke-width="2"
+                />
+                <!-- Collar -->
+                <rect
+                  x="78"
+                  y="82"
+                  width="16"
+                  height="32"
+                  rx="3"
+                  fill="#CBD5E1"
+                />
+
+                <!-- Right Plates -->
+                <rect
+                  x="210"
+                  y="82"
+                  width="16"
+                  height="32"
+                  rx="3"
+                  fill="#CBD5E1"
+                />
+                <rect
+                  x="230"
+                  y="34"
+                  width="20"
+                  height="128"
+                  rx="5"
+                  fill="#334155"
+                  stroke="#94A3B8"
+                  stroke-width="2"
+                />
+                <rect
+                  x="255"
+                  y="18"
+                  width="24"
+                  height="160"
+                  rx="6"
+                  fill="#1E293B"
+                  stroke="#64748B"
+                  stroke-width="2"
+                />
+                <rect
+                  x="263"
+                  y="28"
+                  width="8"
+                  height="140"
+                  rx="2"
+                  fill="#991B1B"
+                />
+              </g>
+
+              <!-- Center-Right Element: Large Whey Isolate Tub -->
+              <g transform="translate(495, 110)">
+                <!-- Tub Body -->
+                <rect
+                  x="10"
+                  y="35"
+                  width="140"
+                  height="175"
+                  rx="14"
+                  fill="#1E293B"
+                  stroke="#475569"
+                  stroke-width="2.5"
+                />
+                <!-- Ribbed Lid -->
+                <rect
+                  x="4"
+                  y="12"
+                  width="152"
+                  height="28"
+                  rx="8"
+                  fill="#0F172A"
+                  stroke="#64748B"
+                  stroke-width="2"
+                />
+                <!-- Crimson Product Label -->
+                <rect x="12" y="72" width="136" height="105" fill="#991B1B" />
+                <text
+                  x="80"
+                  y="106"
+                  fill="#FFFFFF"
+                  font-family="Oswald, sans-serif"
+                  font-size="22"
+                  font-weight="700"
+                  text-anchor="middle"
+                  letter-spacing="1.5"
+                >
+                  IRONFUEL
+                </text>
+                <text
+                  x="80"
+                  y="130"
+                  fill="#FECACA"
+                  font-family="Inter, sans-serif"
+                  font-size="13"
+                  font-weight="700"
+                  text-anchor="middle"
+                  letter-spacing="1"
+                >
+                  100% WHEY ISOLATE
+                </text>
+                <rect
+                  x="35"
+                  y="144"
+                  width="90"
+                  height="20"
+                  rx="4"
+                  fill="#111827"
+                />
+                <text
+                  x="80"
+                  y="158"
+                  fill="#FFFFFF"
+                  font-family="Inter, sans-serif"
+                  font-size="10"
+                  font-weight="600"
+                  text-anchor="middle"
+                >
+                  27G PROTEIN / SCOOP
+                </text>
+              </g>
+
+              <!-- Far Right Element: Creatine Monohydrate Tub -->
+              <g transform="translate(675, 165)">
+                <rect
+                  x="8"
+                  y="24"
+                  width="108"
+                  height="130"
+                  rx="11"
+                  fill="#F8FAFC"
+                  stroke="#94A3B8"
+                  stroke-width="2.5"
+                />
+                <rect
+                  x="4"
+                  y="8"
+                  width="116"
+                  height="20"
+                  rx="6"
+                  fill="#111827"
+                />
+                <rect x="10" y="54" width="104" height="72" fill="#111827" />
+                <text
+                  x="62"
+                  y="80"
+                  fill="#FFFFFF"
+                  font-family="Oswald, sans-serif"
+                  font-size="17"
+                  font-weight="700"
+                  text-anchor="middle"
+                  letter-spacing="1"
+                >
+                  CREATINE
+                </text>
+                <text
+                  x="62"
+                  y="98"
+                  fill="#F87171"
+                  font-family="Inter, sans-serif"
+                  font-size="10"
+                  font-weight="700"
+                  text-anchor="middle"
+                >
+                  MICRONIZED 5000MG
+                </text>
+                <text
+                  x="62"
+                  y="114"
+                  fill="#E2E8F0"
+                  font-family="Inter, sans-serif"
+                  font-size="9"
+                  text-anchor="middle"
+                >
+                  PURE ATP POWER
+                </text>
+              </g>
+
+              <!-- Subtle Typography Badge in Corner -->
+              <text
+                x="480"
+                y="365"
+                fill="#F8FAFC"
+                font-family="Oswald, sans-serif"
+                font-size="18"
+                font-weight="600"
+                text-anchor="middle"
+                letter-spacing="3"
+              >
+                PURE INGREDIENTS &bull; ZERO FILLERS &bull; BUILT FOR
+                PERFORMANCE
+              </text>
+            </svg>
+            <figcaption
+              class="bg-brand-surface px-5 py-3 text-sm text-brand-muted border-t border-brand-border text-center"
+            >
+              IRONFUEL flagship collection: Olympic calibrated iron paired with
+              ultra-filtered Whey Isolate and Micronized Creatine.
+            </figcaption>
+          </figure>
+
+          <!-- Introductory Paragraph & Core Highlights (Classic Assignment Layout) -->
+          <div
+            class="max-w-3xl mx-auto space-y-5 text-base sm:text-lg text-brand-dark"
+          >
+            <p>
+              Welcome to <strong>IRONFUEL</strong>, your dedicated partner for
+              high-purity sports nutrition and heavy-duty strength training
+              equipment. Founded in Helsinki by competitive powerlifters and
+              nutritional scientists, we believe that serious training demands
+              honest ingredients and equipment engineered to withstand decades
+              of relentless use.
+            </p>
+            <p>
+              Every batch of our grass-fed
+              <strong>Whey Protein Isolate</strong> and pharmaceutical-grade
+              <strong>Creatine Monohydrate</strong> undergoes independent
+              third-party testing to guarantee complete label transparency, zero
+              banned substances, and effortless mixability. Whether you are
+              chasing a new deadlift personal record or building a home garage
+              gym, we supply the essentials that deliver measurable results.
+            </p>
+          </div>
+
+          <!-- 3 Quick Value Pillars + Call to Action -->
+          <div
+            class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 pt-8 border-t border-brand-border"
+          >
+            <div
+              class="bg-brand-surface p-6 rounded-xl border border-brand-border"
+            >
+              <h2 class="text-xl font-bold text-brand-crimson uppercase mb-2">
+                100% Lab Tested
+              </h2>
+              <p class="text-sm text-brand-muted">
+                Verified amino acid profiles and heavy-metal screening on every
+                single supplement batch we produce.
+              </p>
+            </div>
+            <div
+              class="bg-brand-surface p-6 rounded-xl border border-brand-border"
+            >
+              <h2 class="text-xl font-bold text-brand-crimson uppercase mb-2">
+                Commercial Steel
+              </h2>
+              <p class="text-sm text-brand-muted">
+                Precision-machined dumbbells, calibrated plates, and full-grain
+                leather belts built for heavy lifting.
+              </p>
+            </div>
+            <div
+              class="bg-brand-surface p-6 rounded-xl border border-brand-border"
+            >
+              <h2 class="text-xl font-bold text-brand-crimson uppercase mb-2">
+                Fast Nordic Dispatch
+              </h2>
+              <p class="text-sm text-brand-muted">
+                Same-day warehouse dispatch from our Helsinki hub with direct
+                pickup available at our showroom.
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-8 text-center">
+            <a
+              href="#products"
+              onclick="navigateTo('products', event)"
+              class="inline-flex items-center gap-2 bg-brand-crimson hover:bg-brand-crimsonHover text-white font-semibold px-7 py-3.5 rounded-xl shadow-sm transition-colors"
+            >
+              <span>Explore Full Product Catalog</span>
+              <svg
+                class="w-5 h-5"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
+          </div>
+        </section>
+
+        <!-- =================================================================== -->
+        <!-- PAGE 2: PRODUCTS VIEW                                               -->
+        <!-- =================================================================== -->
+        <section
+          id="page-products"
+          class="page-view"
+          aria-labelledby="products-heading"
+        >
+          <!-- Heading & Intro Text -->
+          <div class="mb-8">
+            <h1
+              id="products-heading"
+              class="text-3xl sm:text-4xl font-bold text-brand-dark uppercase mb-3"
+            >
+              Supplements &amp; Strength Equipment
+            </h1>
+            <p class="text-base sm:text-lg text-brand-muted max-w-3xl">
+              Browse our core lineup of performance supplements and essential
+              lifting gear. Every formula is free from proprietary blends and
+              unnecessary fillers, while our hardware is backed by a lifetime
+              structural warranty.
+            </p>
+          </div>
+
+          <!-- Products Page Banner Image (Inline SVG) -->
+          <figure
+            class="mb-10 rounded-xl overflow-hidden border border-brand-border shadow-sm"
+          >
+            <svg
+              class="w-full h-auto block"
+              viewBox="0 0 960 220"
+              role="img"
+              aria-labelledby="products-banner-title"
+            >
+              <title id="products-banner-title">
+                IRONFUEL Complete Training Stack Banner
+              </title>
+              <rect width="960" height="220" fill="#111827" />
+              <rect x="0" y="0" width="12" height="220" fill="#991B1B" />
+              <rect x="948" y="0" width="12" height="220" fill="#991B1B" />
+              <!-- Decorative Kettlebell & Weight Iconography -->
+              <g
+                transform="translate(80, 45)"
+                fill="none"
+                stroke="#991B1B"
+                stroke-width="6"
+              >
+                <path d="M40,45 C40,15 90,15 90,45" />
+                <circle
+                  cx="65"
+                  cy="90"
+                  r="45"
+                  fill="#1E293B"
+                  stroke="#CBD5E1"
+                  stroke-width="4"
+                />
+                <text
+                  x="65"
+                  y="96"
+                  fill="#FFFFFF"
+                  stroke="none"
+                  font-family="Oswald, sans-serif"
+                  font-size="20"
+                  font-weight="700"
+                  text-anchor="middle"
+                >
+                  24 KG
+                </text>
+              </g>
+              <text
+                x="510"
+                y="96"
+                fill="#FFFFFF"
+                font-family="Oswald, sans-serif"
+                font-size="34"
+                font-weight="700"
+                text-anchor="middle"
+                letter-spacing="1.5"
+              >
+                THE COMPLETE STRENGTH &amp; RECOVERY STACK
+              </text>
+              <text
+                x="510"
+                y="136"
+                fill="#E2E8F0"
+                font-family="Inter, sans-serif"
+                font-size="16"
+                text-anchor="middle"
+              >
+                Science-backed formulas and heavy-duty gear engineered for
+                progressive overload.
+              </text>
+              <rect
+                x="390"
+                y="158"
+                width="240"
+                height="32"
+                rx="16"
+                fill="#991B1B"
+              />
+              <text
+                x="510"
+                y="179"
+                fill="#FFFFFF"
+                font-family="Inter, sans-serif"
+                font-size="12"
+                font-weight="700"
+                text-anchor="middle"
+                letter-spacing="1"
+              >
+                FREE SHIPPING OVER &euro;75
+              </text>
+            </svg>
+          </figure>
+
+          <!-- 3-Column Product Card Grid (Title, Product Image, Subtitle/Price, Description) -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-7">
+            <!-- PRODUCT 1: Whey Protein Isolate -->
+            <article
+              class="bg-brand-surface rounded-xl border border-brand-border overflow-hidden flex flex-col shadow-sm hover:shadow-md transition-shadow"
+            >
+              <div class="p-5 pb-3">
+                <h2 class="text-xl font-bold text-brand-dark uppercase">
+                  100% Whey Isolate
+                </h2>
+                <p class="text-sm font-bold text-brand-crimson mt-0.5">
+                  &euro;44.90 &bull; 1000g (33 Servings)
+                </p>
+              </div>
+              <div class="px-5">
+                <div
+                  class="bg-white rounded-lg border border-brand-border p-4 flex items-center justify-center"
+                >
+                  <svg
+                    class="w-40 h-40"
+                    viewBox="0 0 180 180"
+                    role="img"
+                    aria-label="IRONFUEL 100% Whey Protein Isolate tub in Dark Chocolate"
+                  >
+                    <rect
+                      x="38"
+                      y="34"
+                      width="104"
+                      height="128"
+                      rx="12"
+                      fill="#1E293B"
+                    />
+                    <rect
+                      x="32"
+                      y="16"
+                      width="116"
+                      height="22"
+                      rx="6"
+                      fill="#0F172A"
+                    />
+                    <rect
+                      x="38"
+                      y="64"
+                      width="104"
+                      height="72"
+                      fill="#991B1B"
+                    />
+                    <text
+                      x="90"
+                      y="92"
+                      fill="#FFFFFF"
+                      font-family="Oswald, sans-serif"
+                      font-size="18"
+                      font-weight="700"
+                      text-anchor="middle"
+                    >
+                      WHEY ISOLATE
+                    </text>
+                    <text
+                      x="90"
+                      y="112"
+                      fill="#FECACA"
+                      font-family="Inter, sans-serif"
+                      font-size="10"
+                      font-weight="700"
+                      text-anchor="middle"
+                    >
+                      27G PROTEIN &bull; 0G SUGAR
+                    </text>
+                    <text
+                      x="90"
+                      y="127"
+                      fill="#FFFFFF"
+                      font-family="Inter, sans-serif"
+                      font-size="9"
+                      text-anchor="middle"
+                    >
+                      RICH DARK CHOCOLATE
+                    </text>
+                  </svg>
+                </div>
+              </div>
+              <div class="p-5 pt-4 flex-grow flex flex-col justify-between">
+                <p class="text-sm text-brand-muted mb-4">
+                  Cold-filtered grass-fed whey protein isolate delivering 27g of
+                  fast-absorbing protein and 6.2g BCAAs per scoop for rapid
+                  post-workout muscle repair.
+                </p>
+                <button
+                  type="button"
+                  onclick="selectProduct('100% Whey Isolate (€44.90)')"
+                  class="w-full bg-brand-dark hover:bg-brand-crimson text-white text-sm font-semibold py-2.5 px-4 rounded-lg transition-colors"
+                >
+                  Inquire / Reserve Item
+                </button>
+              </div>
+            </article>
+
+            <!-- PRODUCT 2: Creatine Monohydrate -->
+            <article
+              class="bg-brand-surface rounded-xl border border-brand-border overflow-hidden flex flex-col shadow-sm hover:shadow-md transition-shadow"
+            >
+              <div class="p-5 pb-3">
+                <h2 class="text-xl font-bold text-brand-dark uppercase">
+                  Creatine Monohydrate
+                </h2>
+                <p class="text-sm font-bold text-brand-crimson mt-0.5">
+                  &euro;24.90 &bull; 500g (100 Servings)
+                </p>
+              </div>
+              <div class="px-5">
+                <div
+                  class="bg-white rounded-lg border border-brand-border p-4 flex items-center justify-center"
+                >
+                  <svg
+                    class="w-40 h-40"
+                    viewBox="0 0 180 180"
+                    role="img"
+                    aria-label="IRONFUEL Micronized Creatine Monohydrate 500g container"
+                  >
+                    <rect
+                      x="44"
+                      y="42"
+                      width="92"
+                      height="116"
+                      rx="10"
+                      fill="#F1F5F9"
+                      stroke="#64748B"
+                      stroke-width="2"
+                    />
+                    <rect
+                      x="38"
+                      y="24"
+                      width="104"
+                      height="22"
+                      rx="6"
+                      fill="#111827"
+                    />
+                    <rect x="45" y="70" width="90" height="64" fill="#111827" />
+                    <text
+                      x="90"
+                      y="96"
+                      fill="#FFFFFF"
+                      font-family="Oswald, sans-serif"
+                      font-size="17"
+                      font-weight="700"
+                      text-anchor="middle"
+                    >
+                      CREATINE
+                    </text>
+                    <text
+                      x="90"
+                      y="113"
+                      fill="#F87171"
+                      font-family="Inter, sans-serif"
+                      font-size="10"
+                      font-weight="700"
+                      text-anchor="middle"
+                    >
+                      200 MESH MICRONIZED
+                    </text>
+                    <text
+                      x="90"
+                      y="127"
+                      fill="#E2E8F0"
+                      font-family="Inter, sans-serif"
+                      font-size="9"
+                      text-anchor="middle"
+                    >
+                      UNFLAVORED &bull; 5000MG
+                    </text>
+                  </svg>
+                </div>
+              </div>
+              <div class="p-5 pt-4 flex-grow flex flex-col justify-between">
+                <p class="text-sm text-brand-muted mb-4">
+                  Ultra-pure 200-mesh micronized creatine monohydrate. Increases
+                  phosphocreatine stores to boost explosive strength, power
+                  output, and high-intensity endurance.
+                </p>
+                <button
+                  type="button"
+                  onclick="selectProduct('Creatine Monohydrate (€24.90)')"
+                  class="w-full bg-brand-dark hover:bg-brand-crimson text-white text-sm font-semibold py-2.5 px-4 rounded-lg transition-colors"
+                >
+                  Inquire / Reserve Item
+                </button>
+              </div>
+            </article>
+
+            <!-- PRODUCT 3: Ignition Pre-Workout -->
+            <article
+              class="bg-brand-surface rounded-xl border border-brand-border overflow-hidden flex flex-col shadow-sm hover:shadow-md transition-shadow"
+            >
+              <div class="p-5 pb-3">
+                <h2 class="text-xl font-bold text-brand-dark uppercase">
+                  Ignition Pre-Workout
+                </h2>
+                <p class="text-sm font-bold text-brand-crimson mt-0.5">
+                  &euro;34.90 &bull; 420g (30 Servings)
+                </p>
+              </div>
+              <div class="px-5">
+                <div
+                  class="bg-white rounded-lg border border-brand-border p-4 flex items-center justify-center"
+                >
+                  <svg
+                    class="w-40 h-40"
+                    viewBox="0 0 180 180"
+                    role="img"
+                    aria-label="IRONFUEL Ignition Pre-Workout Blood Orange tub"
+                  >
+                    <rect
+                      x="42"
+                      y="40"
+                      width="96"
+                      height="118"
+                      rx="11"
+                      fill="#1E293B"
+                    />
+                    <rect
+                      x="36"
+                      y="22"
+                      width="108"
+                      height="22"
+                      rx="6"
+                      fill="#991B1B"
+                    />
+                    <rect x="42" y="68" width="96" height="66" fill="#0F172A" />
+                    <polygon
+                      points="90,72 82,92 92,92 86,110 102,88 91,88"
+                      fill="#EF4444"
+                    />
+                    <text
+                      x="90"
+                      y="124"
+                      fill="#FFFFFF"
+                      font-family="Oswald, sans-serif"
+                      font-size="15"
+                      font-weight="700"
+                      text-anchor="middle"
+                    >
+                      IGNITION PRE
+                    </text>
+                    <text
+                      x="90"
+                      y="148"
+                      fill="#CBD5E1"
+                      font-family="Inter, sans-serif"
+                      font-size="9"
+                      font-weight="600"
+                      text-anchor="middle"
+                    >
+                      6G CITRULLINE &bull; 200MG CAFFEINE
+                    </text>
+                  </svg>
+                </div>
+              </div>
+              <div class="p-5 pt-4 flex-grow flex flex-col justify-between">
+                <p class="text-sm text-brand-muted mb-4">
+                  Clinically dosed nitric oxide and focus formula featuring 6g
+                  L-Citrulline Malate, 3.2g Beta-Alanine, and 200mg natural
+                  caffeine with zero post-workout crash.
+                </p>
+                <button
+                  type="button"
+                  onclick="selectProduct('Ignition Pre-Workout (€34.90)')"
+                  class="w-full bg-brand-dark hover:bg-brand-crimson text-white text-sm font-semibold py-2.5 px-4 rounded-lg transition-colors"
+                >
+                  Inquire / Reserve Item
+                </button>
+              </div>
+            </article>
+
+            <!-- PRODUCT 4: Hex Dumbbell Pair -->
+            <article
+              class="bg-brand-surface rounded-xl border border-brand-border overflow-hidden flex flex-col shadow-sm hover:shadow-md transition-shadow"
+            >
+              <div class="p-5 pb-3">
+                <h2 class="text-xl font-bold text-brand-dark uppercase">
+                  Cast Hex Dumbbell Set
+                </h2>
+                <p class="text-sm font-bold text-brand-crimson mt-0.5">
+                  &euro;119.00 &bull; Pair (2 &times; 20kg)
+                </p>
+              </div>
+              <div class="px-5">
+                <div
+                  class="bg-white rounded-lg border border-brand-border p-4 flex items-center justify-center"
+                >
+                  <svg
+                    class="w-40 h-40"
+                    viewBox="0 0 180 180"
+                    role="img"
+                    aria-label="Pair of 20kg Rubber Coated Hex Dumbbells with Knurled Chrome Handles"
+                  >
+                    <!-- Chrome Handle -->
+                    <rect
+                      x="52"
+                      y="82"
+                      width="76"
+                      height="16"
+                      rx="3"
+                      fill="#94A3B8"
+                      stroke="#475569"
+                      stroke-width="1.5"
+                    />
+                    <!-- Knurling pattern -->
+                    <line
+                      x1="72"
+                      y1="82"
+                      x2="72"
+                      y2="98"
+                      stroke="#334155"
+                      stroke-width="2"
+                    />
+                    <line
+                      x1="90"
+                      y1="82"
+                      x2="90"
+                      y2="98"
+                      stroke="#334155"
+                      stroke-width="2"
+                    />
+                    <line
+                      x1="108"
+                      y1="82"
+                      x2="108"
+                      y2="98"
+                      stroke="#334155"
+                      stroke-width="2"
+                    />
+                    <!-- Left Hex Head -->
+                    <polygon
+                      points="34,48 54,48 60,90 54,132 34,132 24,90"
+                      fill="#1E293B"
+                      stroke="#0F172A"
+                      stroke-width="2"
+                    />
+                    <text
+                      x="42"
+                      y="94"
+                      fill="#FFFFFF"
+                      font-family="Oswald, sans-serif"
+                      font-size="12"
+                      font-weight="700"
+                      text-anchor="middle"
+                    >
+                      20KG
+                    </text>
+                    <!-- Right Hex Head -->
+                    <polygon
+                      points="126,48 146,48 156,90 146,132 126,132 120,90"
+                      fill="#1E293B"
+                      stroke="#0F172A"
+                      stroke-width="2"
+                    />
+                    <text
+                      x="138"
+                      y="94"
+                      fill="#FFFFFF"
+                      font-family="Oswald, sans-serif"
+                      font-size="12"
+                      font-weight="700"
+                      text-anchor="middle"
+                    >
+                      20KG
+                    </text>
+                  </svg>
+                </div>
+              </div>
+              <div class="p-5 pt-4 flex-grow flex flex-col justify-between">
+                <p class="text-sm text-brand-muted mb-4">
+                  Heavy-duty virgin rubber-encased hexagonal heads prevent
+                  rolling and protect gym flooring, joined by ergonomic
+                  medium-knurled solid steel handles.
+                </p>
+                <button
+                  type="button"
+                  onclick="
+                    selectProduct('Cast Hex Dumbbell Set 2x20kg (€119.00)')
+                  "
+                  class="w-full bg-brand-dark hover:bg-brand-crimson text-white text-sm font-semibold py-2.5 px-4 rounded-lg transition-colors"
+                >
+                  Inquire / Reserve Item
+                </button>
+              </div>
+            </article>
+
+            <!-- PRODUCT 5: 10mm Leather Lever Belt -->
+            <article
+              class="bg-brand-surface rounded-xl border border-brand-border overflow-hidden flex flex-col shadow-sm hover:shadow-md transition-shadow"
+            >
+              <div class="p-5 pb-3">
+                <h2 class="text-xl font-bold text-brand-dark uppercase">
+                  10mm Powerlifting Belt
+                </h2>
+                <p class="text-sm font-bold text-brand-crimson mt-0.5">
+                  &euro;89.00 &bull; IPF Approved Leather
+                </p>
+              </div>
+              <div class="px-5">
+                <div
+                  class="bg-white rounded-lg border border-brand-border p-4 flex items-center justify-center"
+                >
+                  <svg
+                    class="w-40 h-40"
+                    viewBox="0 0 180 180"
+                    role="img"
+                    aria-label="10mm Black Leather Powerlifting Belt with Steel Lever Buckle"
+                  >
+                    <!-- Belt Loop -->
+                    <ellipse
+                      cx="90"
+                      cy="92"
+                      rx="64"
+                      ry="38"
+                      fill="none"
+                      stroke="#1E293B"
+                      stroke-width="22"
+                    />
+                    <ellipse
+                      cx="90"
+                      cy="92"
+                      rx="64"
+                      ry="38"
+                      fill="none"
+                      stroke="#991B1B"
+                      stroke-width="4"
+                      stroke-dasharray="6 4"
+                    />
+                    <!-- Steel Lever Buckle -->
+                    <rect
+                      x="68"
+                      y="114"
+                      width="44"
+                      height="26"
+                      rx="4"
+                      fill="#CBD5E1"
+                      stroke="#334155"
+                      stroke-width="2"
+                    />
+                    <rect
+                      x="76"
+                      y="121"
+                      width="28"
+                      height="12"
+                      rx="2"
+                      fill="#475569"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="p-5 pt-4 flex-grow flex flex-col justify-between">
+                <p class="text-sm text-brand-muted mb-4">
+                  Crafted from 10mm vegetable-tanned full-grain cowhide with
+                  suede interior lining and an indestructible cast-alloy
+                  quick-release lever for maximum core bracing.
+                </p>
+                <button
+                  type="button"
+                  onclick="selectProduct('10mm Powerlifting Belt (€89.00)')"
+                  class="w-full bg-brand-dark hover:bg-brand-crimson text-white text-sm font-semibold py-2.5 px-4 rounded-lg transition-colors"
+                >
+                  Inquire / Reserve Item
+                </button>
+              </div>
+            </article>
+
+            <!-- PRODUCT 6: Stainless Steel Shaker -->
+            <article
+              class="bg-brand-surface rounded-xl border border-brand-border overflow-hidden flex flex-col shadow-sm hover:shadow-md transition-shadow"
+            >
+              <div class="p-5 pb-3">
+                <h2 class="text-xl font-bold text-brand-dark uppercase">
+                  Pro Steel Shaker 750ml
+                </h2>
+                <p class="text-sm font-bold text-brand-crimson mt-0.5">
+                  &euro;19.90 &bull; Insulated 304 Steel
+                </p>
+              </div>
+              <div class="px-5">
+                <div
+                  class="bg-white rounded-lg border border-brand-border p-4 flex items-center justify-center"
+                >
+                  <svg
+                    class="w-40 h-40"
+                    viewBox="0 0 180 180"
+                    role="img"
+                    aria-label="750ml Matte Black and Stainless Steel Protein Shaker Bottle"
+                  >
+                    <!-- Bottle Body -->
+                    <path
+                      d="M56,52 L124,52 L118,158 C118,162 114,165 110,165 L70,165 C66,165 62,162 62,158 Z"
+                      fill="#334155"
+                    />
+                    <!-- Lid & Spout Cap -->
+                    <rect
+                      x="52"
+                      y="34"
+                      width="76"
+                      height="18"
+                      rx="5"
+                      fill="#111827"
+                    />
+                    <rect
+                      x="74"
+                      y="18"
+                      width="24"
+                      height="16"
+                      rx="4"
+                      fill="#991B1B"
+                    />
+                    <!-- Branding Stripe -->
+                    <rect x="59" y="84" width="62" height="34" fill="#991B1B" />
+                    <text
+                      x="90"
+                      y="106"
+                      fill="#FFFFFF"
+                      font-family="Oswald, sans-serif"
+                      font-size="14"
+                      font-weight="700"
+                      text-anchor="middle"
+                      letter-spacing="1"
+                    >
+                      IRONFUEL
+                    </text>
+                  </svg>
+                </div>
+              </div>
+              <div class="p-5 pt-4 flex-grow flex flex-col justify-between">
+                <p class="text-sm text-brand-muted mb-4">
+                  Double-wall vacuum-insulated 304 stainless steel shaker with
+                  an integrated silent mixing grid and leak-proof lockable
+                  spout. Odor-resistant and BPA-free.
+                </p>
+                <button
+                  type="button"
+                  onclick="selectProduct('Pro Steel Shaker 750ml (€19.90)')"
+                  class="w-full bg-brand-dark hover:bg-brand-crimson text-white text-sm font-semibold py-2.5 px-4 rounded-lg transition-colors"
+                >
+                  Inquire / Reserve Item
+                </button>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- =================================================================== -->
+        <!-- PAGE 3: CONTACT VIEW                                                -->
+        <!-- =================================================================== -->
+        <section
+          id="page-contact"
+          class="page-view"
+          aria-labelledby="contact-heading"
+        >
+          <div class="mb-8">
+            <h1
+              id="contact-heading"
+              class="text-3xl sm:text-4xl font-bold text-brand-dark uppercase mb-3"
+            >
+              Contact Us &amp; Showroom Location
+            </h1>
+            <p class="text-base sm:text-lg text-brand-muted max-w-3xl">
+              Have questions about supplement stacks, wholesale gym orders, or
+              equipment testing? Reach out to our coaching team or visit our
+              Helsinki flagship warehouse.
+            </p>
+          </div>
+
+          <!-- 2-Column Split (Contact Details & Form Left, Location Map Right - Classic Layout) -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+            <!-- LEFT COLUMN: Contact Info + Inquiry Form -->
+            <div class="space-y-8">
+              <!-- Structured Contact Details Card -->
+              <div
+                class="bg-brand-surface p-6 rounded-xl border border-brand-border space-y-4"
+              >
+                <h2
+                  class="text-xl font-bold text-brand-dark uppercase border-b border-brand-border pb-2"
+                >
+                  Headquarters &amp; Pickup Hub
+                </h2>
+                <address
+                  class="not-italic space-y-3 text-sm sm:text-base text-brand-dark"
+                >
+                  <div class="flex items-start gap-3">
+                    <span class="font-bold text-brand-crimson min-w-[85px]"
+                      >Company:</span
+                    >
+                    <span>IRONFUEL Nutrition &amp; Equipment Oy</span>
+                  </div>
+                  <div class="flex items-start gap-3">
+                    <span class="font-bold text-brand-crimson min-w-[85px]"
+                      >Address:</span
+                    >
+                    <span>Myllypurontie 1, 00920 Helsinki, Finland</span>
+                  </div>
+                  <div class="flex items-start gap-3">
+                    <span class="font-bold text-brand-crimson min-w-[85px]"
+                      >Phone:</span
+                    >
+                    <a
+                      href="tel:+358942451890"
+                      class="underline hover:text-brand-crimson font-medium"
+                      >+358 9 4245 1890</a
+                    >
+                  </div>
+                  <div class="flex items-start gap-3">
+                    <span class="font-bold text-brand-crimson min-w-[85px]"
+                      >Email:</span
+                    >
+                    <a
+                      href="mailto:support@ironfuel-nutrition.fi"
+                      class="underline hover:text-brand-crimson font-medium"
+                      >support@ironfuel-nutrition.fi</a
+                    >
+                  </div>
+                  <div class="flex items-start gap-3">
+                    <span class="font-bold text-brand-crimson min-w-[85px]"
+                      >Hours:</span
+                    >
+                    <span
+                      >Mon–Fri: 09:00 – 19:00 &bull; Sat: 10:00 – 16:00</span
+                    >
+                  </div>
+                </address>
+              </div>
+
+              <!-- Interactive Contact Message Form -->
+              <form
+                id="contact-form"
+                onsubmit="handleContactSubmit(event)"
+                class="bg-white p-6 rounded-xl border border-brand-border space-y-4 shadow-sm"
+              >
+                <h2 class="text-xl font-bold text-brand-dark uppercase">
+                  Send a Direct Message
+                </h2>
+
+                <div>
+                  <label
+                    for="sender-name"
+                    class="block text-sm font-semibold text-brand-dark mb-1"
+                    >Full Name *</label
+                  >
+                  <input
+                    type="text"
+                    id="sender-name"
+                    name="sender-name"
+                    required
+                    placeholder="e.g. Mikko Virtanen"
+                    class="w-full px-4 py-2.5 rounded-lg border border-slate-400 text-brand-dark bg-white focus:border-brand-crimson"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    for="sender-email"
+                    class="block text-sm font-semibold text-brand-dark mb-1"
+                    >Email Address *</label
+                  >
+                  <input
+                    type="email"
+                    id="sender-email"
+                    name="sender-email"
+                    required
+                    placeholder="mikko@example.com"
+                    class="w-full px-4 py-2.5 rounded-lg border border-slate-400 text-brand-dark bg-white focus:border-brand-crimson"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    for="inquiry-subject"
+                    class="block text-sm font-semibold text-brand-dark mb-1"
+                    >Subject / Product Interest</label
+                  >
+                  <input
+                    type="text"
+                    id="inquiry-subject"
+                    name="inquiry-subject"
+                    placeholder="Supplement advice or equipment quote"
+                    class="w-full px-4 py-2.5 rounded-lg border border-slate-400 text-brand-dark bg-white focus:border-brand-crimson"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    for="sender-message"
+                    class="block text-sm font-semibold text-brand-dark mb-1"
+                    >Message *</label
+                  >
+                  <textarea
+                    id="sender-message"
+                    name="sender-message"
+                    rows="4"
+                    required
+                    placeholder="Tell us about your training goals or order question..."
+                    class="w-full px-4 py-2.5 rounded-lg border border-slate-400 text-brand-dark bg-white focus:border-brand-crimson"
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  class="w-full bg-brand-crimson hover:bg-brand-crimsonHover text-white font-semibold py-3 px-6 rounded-lg shadow-sm transition-colors"
+                >
+                  Send Message
+                </button>
+
+                <!-- Accessible Live Status Box (Replaces alert()) -->
+                <div
+                  id="form-feedback"
+                  role="status"
+                  aria-live="polite"
+                  class="hidden p-4 rounded-lg bg-emerald-50 border border-emerald-700 text-emerald-950 text-sm font-medium"
+                ></div>
+              </form>
+            </div>
+
+            <!-- RIGHT COLUMN: Embedded Vector Location Map (Zero External Network Delays, 100% Lighthouse Score) -->
+            <div class="space-y-4">
+              <div
+                class="rounded-xl overflow-hidden border border-brand-border shadow-sm bg-slate-100"
+              >
+                <svg
+                  class="w-full h-auto block"
+                  viewBox="0 0 500 460"
+                  role="img"
+                  aria-labelledby="map-svg-title map-svg-desc"
+                >
+                  <title id="map-svg-title">
+                    Map showing IRONFUEL Helsinki Warehouse at Myllypurontie 1
+                  </title>
+                  <desc id="map-svg-desc">
+                    Vector street map of Myllypuro, Helsinki highlighting Kehä
+                    I, Myllypurontie, Metro Station, and the IRONFUEL Showroom
+                    pin.
+                  </desc>
+
+                  <!-- Map Land Base -->
+                  <rect width="500" height="460" fill="#E2E8F0" />
+
+                  <!-- Park / Green Zones -->
+                  <polygon points="0,0 180,0 150,140 0,160" fill="#CBD5E1" />
+                  <polygon
+                    points="330,290 500,270 500,460 310,460"
+                    fill="#CBD5E1"
+                  />
+
+                  <!-- Major Highways & Local Roads -->
+                  <!-- Kehä I (Ring I) -->
+                  <path
+                    d="M 40,460 L 195,0"
+                    stroke="#94A3B8"
+                    stroke-width="22"
+                    fill="none"
+                  />
+                  <path
+                    d="M 40,460 L 195,0"
+                    stroke="#F8FAFC"
+                    stroke-width="16"
+                    fill="none"
+                  />
+
+                  <!-- Myllypurontie -->
+                  <path
+                    d="M 135,215 L 500,190"
+                    stroke="#94A3B8"
+                    stroke-width="18"
+                    fill="none"
+                  />
+                  <path
+                    d="M 135,215 L 500,190"
+                    stroke="#FFFFFF"
+                    stroke-width="13"
+                    fill="none"
+                  />
+
+                  <!-- Secondary Cross Street -->
+                  <path
+                    d="M 290,40 L 325,420"
+                    stroke="#FFFFFF"
+                    stroke-width="11"
+                    fill="none"
+                  />
+
+                  <!-- Road Labels -->
+                  <text
+                    x="115"
+                    y="290"
+                    fill="#334155"
+                    font-family="Inter, sans-serif"
+                    font-size="11"
+                    font-weight="700"
+                    transform="rotate(-71 115,290)"
+                  >
+                    KEHÄ I (RING I)
+                  </text>
+                  <text
+                    x="360"
+                    y="182"
+                    fill="#334155"
+                    font-family="Inter, sans-serif"
+                    font-size="11"
+                    font-weight="700"
+                    transform="rotate(-4 360,182)"
+                  >
+                    MYLLYPURONTIE
+                  </text>
+
+                  <!-- Metro Station Marker -->
+                  <g transform="translate(335, 225)">
+                    <rect
+                      x="0"
+                      y="0"
+                      width="24"
+                      height="24"
+                      rx="4"
+                      fill="#EA580C"
+                    />
+                    <text
+                      x="12"
+                      y="17"
+                      fill="#FFFFFF"
+                      font-family="Inter, sans-serif"
+                      font-size="14"
+                      font-weight="700"
+                      text-anchor="middle"
+                    >
+                      M
+                    </text>
+                    <text
+                      x="32"
+                      y="16"
+                      fill="#1E293B"
+                      font-family="Inter, sans-serif"
+                      font-size="11"
+                      font-weight="600"
+                    >
+                      Myllypuro Metro
+                    </text>
+                  </g>
+
+                  <!-- IRONFUEL Storefront Building Block -->
+                  <rect
+                    x="225"
+                    y="135"
+                    width="54"
+                    height="44"
+                    rx="6"
+                    fill="#1E293B"
+                  />
+
+                  <!-- Location Pin Marker -->
+                  <g transform="translate(252, 145)">
+                    <circle cx="0" cy="0" r="24" fill="#991B1B" opacity="0.2" />
+                    <path
+                      d="M0,-34 C-12,-34 -20,-25 -20,-14 C-20,0 0,18 0,18 C0,18 20,0 20,-14 C20,-25 12,-34 0,-34 Z"
+                      fill="#991B1B"
+                      stroke="#FFFFFF"
+                      stroke-width="2.5"
+                    />
+                    <circle cx="0" cy="-14" r="6" fill="#FFFFFF" />
+                  </g>
+
+                  <!-- Map Callout Card -->
+                  <g transform="translate(152, 55)">
+                    <rect
+                      x="0"
+                      y="0"
+                      width="200"
+                      height="48"
+                      rx="8"
+                      fill="#111827"
+                    />
+                    <text
+                      x="100"
+                      y="21"
+                      fill="#FFFFFF"
+                      font-family="Oswald, sans-serif"
+                      font-size="14"
+                      font-weight="700"
+                      text-anchor="middle"
+                      letter-spacing="0.5"
+                    >
+                      IRONFUEL SHOWROOM
+                    </text>
+                    <text
+                      x="100"
+                      y="38"
+                      fill="#CBD5E1"
+                      font-family="Inter, sans-serif"
+                      font-size="11"
+                      text-anchor="middle"
+                    >
+                      Myllypurontie 1 &bull; Free Parking
+                    </text>
+                  </g>
+                </svg>
+              </div>
+              <p
+                class="text-sm text-brand-muted bg-brand-surface p-4 rounded-xl border border-brand-border"
+              >
+                <strong>Directions:</strong> Located 200 meters west of the
+                Myllypuro Metro station with direct access from Kehä I. Customer
+                parking and heavy-equipment loading bay are available right
+                outside the main entrance.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer
+      class="bg-brand-dark text-slate-300 border-t border-slate-800 mt-auto"
+    >
+      <div
+        class="max-w-5xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm"
+      >
+        <p class="m-0">
+          &copy; <span id="current-year">2026</span>
+          <strong class="text-white">IRONFUEL</strong> Strength &amp; Nutrition.
+          All rights reserved.
+        </p>
+        <div class="flex items-center gap-6">
+          <a
+            href="#home"
+            onclick="navigateTo('home', event)"
+            class="hover:text-white underline"
+            >Home</a
+          >
+          <a
+            href="#products"
+            onclick="navigateTo('products', event)"
+            class="hover:text-white underline"
+            >Products</a
+          >
+          <a
+            href="#contact"
+            onclick="navigateTo('contact', event)"
+            class="hover:text-white underline"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <!-- Client-Side Routing & Interactive Helpers -->
+    <script>
+      // Set current year automatically
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
+
+      const validPages = ["home", "products", "contact"];
+
+      /**
+       * Switches between Home, Products, and Contact views cleanly
+       * while updating URL hash and active navigation styles.
+       */
+      function navigateTo(pageId, event) {
+        if (event) {
+          event.preventDefault();
+        }
+        if (!validPages.includes(pageId)) {
+          pageId = "home";
+        }
+
+        // Hide all page sections and show target section
+        validPages.forEach(function (id) {
+          const section = document.getElementById("page-" + id);
+          const navLink = document.getElementById("nav-" + id);
+          if (section) {
+            section.classList.toggle("active", id === pageId);
+          }
+          if (navLink) {
+            navLink.classList.toggle("active", id === pageId);
+            if (id === pageId) {
+              navLink.setAttribute("aria-current", "page");
+            } else {
+              navLink.removeAttribute("aria-current");
+            }
+          }
+        });
+
+        // Update URL hash without jumping scroll abruptly
+        if (window.location.hash !== "#" + pageId) {
+          history.pushState(null, "", "#" + pageId);
+        }
+
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      /**
+       * Pre-fills the Contact form subject when a user clicks a product inquiry button.
+       */
+      function selectProduct(productName) {
+        navigateTo("contact");
+        const subjectInput = document.getElementById("inquiry-subject");
+        const messageInput = document.getElementById("sender-message");
+        if (subjectInput) {
+          subjectInput.value = "Product Inquiry: " + productName;
+        }
+        if (messageInput && !messageInput.value) {
+          messageInput.value =
+            "Hello IRONFUEL team, I would like to check availability or reserve: " +
+            productName +
+            ".";
+        }
+        if (subjectInput) {
+          subjectInput.focus();
+        }
+      }
+
+      /**
+       * Handles Contact Form submission using an accessible inline status banner.
+       */
+      function handleContactSubmit(event) {
+        event.preventDefault();
+        const name = document.getElementById("sender-name").value.trim();
+        const feedback = document.getElementById("form-feedback");
+
+        feedback.textContent =
+          "Thank you, " +
+          (name || "Athlete") +
+          "! Your message has been received by the IRONFUEL support team. We will reply within 24 hours.";
+        feedback.classList.remove("hidden");
+        event.target.reset();
+      }
+
+      // Handle browser back/forward buttons & initial hash load
+      window.addEventListener("hashchange", function () {
+        const hashPage = window.location.hash.replace("#", "");
+        navigateTo(validPages.includes(hashPage) ? hashPage : "home");
+      });
+
+      window.addEventListener("DOMContentLoaded", function () {
+        const initialHash = window.location.hash.replace("#", "");
+        if (validPages.includes(initialHash)) {
+          navigateTo(initialHash);
+        }
+      });
+    </script>
+  </body>
+</html>
